@@ -18,5 +18,5 @@ function mi_funcion_con_let(){
     //TODO: Buscar una condicion para evaluar si la variable existe
     //console.log("valor de i al final "+i);
 }
-
+console.log("Inicio de ejemplos JS con Arrays")
 console.log("Adios mundo cruel!");
