@@ -58,6 +58,25 @@ pruebaDeArgumentos();
 pruebaDeArgumentos(1);
 pruebaDeArgumentos("hola",7,25,"otro",new Date());
 console.log("Inicio de ejemplos JS con Arrays");
+function testConArrays(){
+    let mi_array = new Array();
+    mi_array[0]=7;
+    mi_array[1]="valor";
+    mi_array[mi_array.length-1];
+    let mi_otro_array = [];
+    let otro =  ["uno",2,new Date()];
+    // Arrays asociativos
+    let array_asociativo = new Array();
+    array_asociativo['uno'] = 1;
+    console.log(array_asociativo['uno']);
+    let persona = new Array();
+    persona.nombre = "Ruben";
+    persona.apellido1 = "Gomez";
+    persona.pruebaDeArgumentos = pruebaDeArgumentos;
+    persona.pruebaDeArgumentos();
+    console.log("Nombre completo = " + persona.nombre  +" " +persona.apellido1) 
+    
+}
 console.log("Adios mundo cruel!");
 
 

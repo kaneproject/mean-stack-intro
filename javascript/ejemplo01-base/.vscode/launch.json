@@ -2,10 +2,29 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch",
+            "name": "Launch app.js",
             "type": "node",
             "request": "launch",
             "program": "${workspaceRoot}/app.js",
+            "stopOnEntry": false,
+            "args": [],
+            "cwd": "${workspaceRoot}",
+            "preLaunchTask": null,
+            "runtimeExecutable": null,
+            "runtimeArgs": [
+                "--nolazy"
+            ],
+            "env": {
+                "NODE_ENV": "development"
+            },
+            "console": "internalConsole",
+            "sourceMaps": false,
+            "outFiles": []
+        },{
+            "name": "Launch otro.js",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/otro.js",
             "stopOnEntry": false,
             "args": [],
             "cwd": "${workspaceRoot}",
