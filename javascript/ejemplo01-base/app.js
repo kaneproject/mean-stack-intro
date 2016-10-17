@@ -78,8 +78,29 @@ function testConArrays(){
     
 }
 console.log("Adios mundo cruel!");
+function MiClase(campo1, campo2){
+    this.clave1 = campo1;
+    this.clave2 = campo2;
+    
+}
+MiClase.prototype.miMetodo = function () {
+        return this.clave1 + "-" +this.clave2;
+    };
+var miObjeto = new MiClase("uno","dos");
+console.log("EL valor de la clave 1 es "+miObjeto.clave1);
+console.log("Mi objeto tiene : " + miObjeto.miMetodo())
 
-
+Array.prototype.contiene = function (objeto){
+    for(let i = 0; i < this.length ; i++){
+        let elementoActual = this[i];
+        if(elementoActual == objeto ){
+            return true;
+        }
+    }
+    return false;
+}
+let mi_array_de_prueba = [1,2,3,7,10];
+console.log(mi_array_de_prueba.contiene(3));
 
 
 
