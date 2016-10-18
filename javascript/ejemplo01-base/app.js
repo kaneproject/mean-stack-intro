@@ -102,6 +102,12 @@ Array.prototype.contiene = function (objeto){
 let mi_array_de_prueba = [1,2,3,7,10];
 console.log(mi_array_de_prueba.contiene(3));
 
+/texto a validar/.test("si hay texto a validar entonces true");
+
+let mi_info = [{uno:1,dos:2,tres:{uno:1,dos:2,tres:3}},{uno:1,dos:2,tres:3}];
+mi_info[0].tres.tres;
+var resultado = eval(a)
+
 
 
 

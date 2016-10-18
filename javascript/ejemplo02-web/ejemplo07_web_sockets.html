@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>WEB SOCKETS</title>
+<script type="text/javascript">
+	var miWebSocket = null;
+	function conectar(){
+
+		miWebSocket = new WebSocket("ws://localhost:8080/HTML5/pruebaws");
+		miWebSocket.onopen=function (){
+			alert("Web Socket abierto");
+		};
+		miWebSocket.onmessage=function (evento){
+			alert("Web Socket responde : " + evento.data);
+		};
+		miWebSocket.onclose=function (){
+			alert("Web Socket cerrado");
+		};
+		miWebSocket.onerror=function (evento){
+			alert("Error en Web Socket " + evento.data);
+		};
+	}
+	function desconectar(){
+		miWebSocket.close();
+	}
+	function enviar(){
+		var mensaje = document.getElementById("mensaje").value;
+		miWebSocket.send(mensaje);
+	}
+</script>
+</head>
+<body>
+	<input type="button" value="Conectar" onclick="conectar()"/><br/>
+	<input type="button" value="Desconectar" onclick="desconectar()"/><br/>
+	<input type="text" id="mensaje">
+	<input type="button" value="enviar mensaje" onclick="enviar()">
+	
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Ejemplo Web Storage</title>
+	<script type="text/javascript">
+		function almacenamiento(){
+			if(localStorage){
+
+				if(localStorage.getItem("color")){
+					alert("El color almacenado en el Local Storage es : " + localStorage.getItem("color"));
+				}else{
+					localStorage.setItem("color", "cyan");
+				}
+				if(localStorage.getItem("ovejas")){
+					alert("El tipo de ovejas es : " + 
+							localStorage['ovejas']);
+				}else{
+					localStorage['ovejas']="merinas";
+				}
+				if(localStorage.getItem("tipoCoche")){
+					
+					alert("El coche que te mola es : " + 
+							localStorage.tipoCoche);
+				}else{
+					localStorage.tipoCoche = "Aston Martin";
+				}
+				alert("El numero de elementos en LocalStorage es : " + localStorage.length);
+				comprobarLocalStorageConAlert();
+				localStorage.setItem("color", "azul");
+				comprobarLocalStorageConAlert();
+				localStorage.removeItem("color");
+				comprobarLocalStorageConAlert();
+				//localStorage.clear();
+				alert("El numero de elementos en LocalStorage es : " + localStorage.length);
+				
+				
+			}else{
+				localStorage = {};
+			}
+			
+		}
+		function comprobarLocalStorageConAlert(){
+			for (var contador = 0; 
+				contador < localStorage.length; 
+				contador++) {
+				var key = localStorage.key(contador);
+				alert("El valor de " + key + " es " + localStorage.getItem(key));
+			}
+		}
+	</script>
+</head>
+<body onload="almacenamiento()">
+	
+</body>
+</html>
