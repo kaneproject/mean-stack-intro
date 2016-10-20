@@ -2,6 +2,14 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Ejemplo Ferrari - Launch",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:8080/ejercicio_ferrari.html",
+            "sourceMaps": true,
+            "webRoot": "${workspaceRoot}"
+        },
+        {
             "name": "Launch Chrome against localhost, with sourcemaps",
             "type": "chrome",
             "request": "launch",
