@@ -6,6 +6,7 @@ function initializeEvents(){
    $("#boton4").click(addFirstElement);
    $("#boton5").click(deleteLastElement);
    $("#boton6").click(deleteFirstElement);
+   $("#boton7").click(deleteFirstAndSecond);
 }
 function deleteAll(){
     $("ul").empty();
@@ -29,10 +30,10 @@ function deleteFirstElement(){
     $("li").eq(0).remove();
 }
 function deleteFirstAndSecond(){
-    $("li").lt(2).remove();
+    $("li:lt(2)").remove();
 }
 function deletePreAndLast(){
    let position = $("li").length-3;
-   let liToDelete = $("li").gt(position);
+   let liToDelete = $("li:gt("+position+")");
    liToDelete.remove();
 }
