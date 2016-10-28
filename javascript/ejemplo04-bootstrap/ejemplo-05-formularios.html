@@ -91,6 +91,75 @@
         </div>
     </form> 
 
+    <h2>Checkbox y radiobutton</h2>
+
+    <div class="checkbox-inline">
+        <label>
+            <input type="checkbox" value="check1" checked />
+            marcado
+        </label>
+    </div>
+    <div class="checkbox-inline disabled">
+        <label>
+            <input type="checkbox" value="check2" disabled />
+            deshabilitado
+        </label>
+    </div>
+    <br/>
+    <div class="radio-inline">
+        <label>
+            <input type="radio" name="optionsRadio" id="optionsRadio1" value="option1" checked/>
+            marcado
+        </label>
+    </div>
+    <div class="radio-inline disabled">
+        <label>
+            <input type="radio" name="optionsRadio" id="optionsRadio2" value="option2" disabled/>
+            marcado
+        </label>
+    </div>
+
+    <h2>Validaciones</h2>
+
+    <div class="form-group has-success has-feedback">
+        <label class="control-label" for="entradaCorrecta">Entrada correcta!</label>
+        <input type="text" class="form-control" id="entradaCorrecta"/>
+        <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+    </div>
+
+    <div class="form-group has-warning has-feedback">
+        <label class="control-label" for="entradaAlerta">Entrada con aviso!</label>
+        <input type="text" class="form-control" id="entradaAlerta"/>
+        <span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+    </div>
+
+    <div class="form-group has-error has-feedback">
+        <label class="control-label" for="entradaError">Entrada con error!</label>
+        <input type="text" class="form-control" id="entradaError"/>
+        <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+    </div>
+
+    <h2>tamaños</h2>
+
+    <input class="form-control input-lg" type="text" placeholder=".input-lg"/>
+    <input class="form-control" type="text" placeholder="Por defecto"/>
+    <input class="form-control input-sm" type="text" placeholder=".input-sm"/>
+    
+    <form class="form-horizontal" role="form">
+        <div class="form-group form-group-lg">
+            <label class="col-sm-2 control-label" for="campo_lg">Campo LG</label>
+            <div class="col-sm-10">
+                <input class="form-control" type="text" id="campo_lg" placeholder="Campo grande"/>
+            </div>
+        </div>
+        <div class="form-group form-group-sm">
+            <label class="col-sm-2 control-label" for="campo_sm">Campo SM</label>
+            <div class="col-sm-10">
+                <input class="form-control" type="text" id="campo_sm" placeholder="Campo pequeño"/>
+            </div>
+        </div>
+    </form>
+
 
    </div>
 </body>
