@@ -18,18 +18,80 @@
     <![endif]-->
 </head>
 <body>
-    <header class="container">
-        <h1>Ejemplo Bootstrap</h1>
-    </header>
-    <aside>
-        <article>
-            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus sapiente fuga odio? Vel quo natus eaque illo! Repellendus explicabo voluptatibus hic et aperiam deleniti sit pariatur assumenda. Sit laudantium, pariatur!</div>
-            <div>Ab consequuntur dicta placeat earum expedita explicabo voluptatem officiis eos, facere, asperiores obcaecati accusantium natus nesciunt est labore? Aperiam reprehenderit distinctio fuga dicta accusamus ullam odio nostrum! Laborum, officia, at.</div>
-            <div>Dolorem nulla voluptatum assumenda ea rem expedita, omnis magnam sunt soluta, voluptas minus quam provident voluptatibus earum temporibus at aliquid qui natus voluptates repellat rerum cumque. Architecto excepturi quam ex.</div>
-        </article>
-    </aside>
-    <footer class="container">
-        Copyright. Getafe Rules!
-    </footer>
+   <div class="container">
+
+    <h1>Ejemplos de formularios</h1>
+
+    <h2>Ejemplo básico</h2>
+
+    <form role="form">
+        <div class="form-group">
+            <label for="correo_electronico">Correo Electrónico</label>
+            <input type="email" class="form-control" id="correo_electronico" placeholder="Introduzca email"/>
+        </div>
+        <div class="form-group">
+            <label for="password">Contraseña</label>
+            <input type="password" class="form-control" id="password" placeholder="Contraseña" pattern="[0-9]{7,8}[a-zA-Z]"/>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox"/>Recordarme
+            </label>
+        </div>
+        <button type="submit" class="btn btn-default">Entrar</button>
+    </form> 
+
+    <h2>.form-inline</h2>
+
+    <form role="form" class="form-inline">
+        <div class="form-group">
+            <label class="visible-xs" for="correo_electronico">Correo Electrónico</label>
+            <input type="email" class="form-control" id="correo_electronico" placeholder="Introduzca email"/>
+        </div>
+        <div class="form-group">
+            <label class="visible-xs" for="password">Contraseña</label>
+            <input type="password" class="form-control" id="password" placeholder="Contraseña" pattern="[0-9]{7,8}[a-zA-Z]"/>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox"/>Recordarme
+            </label>
+        </div>
+        <button type="submit" class="btn btn-default">Entrar</button>
+    </form> 
+
+    <h2>.form-horizontal</h2>
+
+    <form role="form" class="form-horizontal">
+        <div class="form-group">
+            <label for="correo_electronico" class="col-sm-2 control-label">Correo Electrónico</label>
+            <div class="col-sm-10">
+                <input type="email" class="form-control" id="correo_electronico" placeholder="Introduzca email"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password" class="col-sm-2 control-label">Contraseña</label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" id="password" placeholder="Contraseña" pattern="[0-9]{7,8}[a-zA-Z]"/>
+            </div>
+        </div>
+        <div class="form-group">
+             <div class="col-sm-offset-2 col-sm-10">
+                 <div class="checkbox">
+                    <label>
+                        <input type="checkbox"/>Recordarme
+                    </label>
+                </div>
+             </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default">Entrar</button>
+            </div>
+        </div>
+    </form> 
+
+
+   </div>
 </body>
 </html>
