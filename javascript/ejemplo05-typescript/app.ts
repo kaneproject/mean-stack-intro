@@ -177,3 +177,52 @@ let funcionLambda = (uno: number,dos: number) =>{
     return uno + dos;
 }
 console.log("Resultado de sumar 1 y 3 : "+funcionLambda(1,3));
+
+const PI = 3.141592654;
+//PI = 23 Esto no vale
+let {variable1,variable2} = {variable1:"valor1",variable2:"valor2"};
+console.log(variable1);
+console.log(variable2);
+
+dameLosCamposPorConsola("uno",2,"tres","cuatro",5,"seis");
+function dameLosCamposPorConsola(campo1: string,campo2: number, ...elRestoDeCampos): void{
+    console.log(campo1);
+    console.log(campo2);
+    console.log(elRestoDeCampos);
+    console.log("for--in");
+    for(let posicion in elRestoDeCampos){
+        console.log("El campo en la posicion " + posicion +" \n\t es " + elRestoDeCampos[posicion]);
+    }
+    console.log("for--of");
+    for(let campo of elRestoDeCampos){
+        console.log("El campo es " + campo);
+    }
+}
+enum TipoDeVia{
+    Calle = 7, 
+    Rua = 14, 
+    Plaza = 3, 
+    Camino, 
+    Avenida, 
+    Carretera
+}
+namespace TipoDeVia{
+    export function esAvenida(texto: string):TipoDeVia{
+        if(texto == "Avda"){
+            return TipoDeVia.Avenida;
+        }
+    }
+}
+
+enum Puntos {
+    Touchdown = 5,
+    Goal = 3
+}
+var miTipoDeVia: TipoDeVia = TipoDeVia.Calle;
+console.log("Tipo de via : " + miTipoDeVia);
+console.log("Tipo de via : " + TipoDeVia[miTipoDeVia]);
+var avenida = TipoDeVia.esAvenida("Avda");
+
+function invertir<T> (elementos: T[]): T[] {
+    
+}
