@@ -182,5 +182,33 @@ console.log("Tipo de via : " + miTipoDeVia);
 console.log("Tipo de via : " + TipoDeVia[miTipoDeVia]);
 var avenida = TipoDeVia.esAvenida("Avda");
 function invertir(elementos) {
+    let invertido = [];
+    for (let posicion = 0, posicionInvertido = elementos.length - 1; posicion < elementos.length; posicion++, posicionInvertido--) {
+        invertido[posicionInvertido] = elementos[posicion];
+    }
+    return invertido;
 }
+let textosInvertidos = invertir(["clientes", "clientes2"]);
+let hijosDePadreInvertidos = invertir([hijoDePadre, hijoDePadre2]);
+class DAOGenerico {
+    stringify(objeto) {
+        return objeto + "";
+    }
+}
+class ArrayGenericDAO {
+    constructor() {
+        this.almacen = [];
+    }
+    add(objeto) {
+        this.almacen.push(objeto);
+    }
+    del(objeto) {
+        // recorrer, buscar y eliminar! (Terminator)
+    }
+    list() {
+        return this.almacen;
+    }
+}
+var dao = null;
+dao.add(new Persona("", "", ""));
 //# sourceMappingURL=app.js.map

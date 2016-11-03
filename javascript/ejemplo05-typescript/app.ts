@@ -224,5 +224,65 @@ console.log("Tipo de via : " + TipoDeVia[miTipoDeVia]);
 var avenida = TipoDeVia.esAvenida("Avda");
 
 function invertir<T> (elementos: T[]): T[] {
-    
+    let invertido: T[] = [];
+    for(let posicion = 0, posicionInvertido = elementos.length -1 ; 
+        posicion < elementos.length;
+        posicion++,posicionInvertido-- ){
+        invertido[posicionInvertido] = elementos[posicion];
+    }
+    return invertido;
+}
+let textosInvertidos :string[] = invertir<string>(["clientes","clientes2"]);
+
+let hijosDePadreInvertidos :HijoDePadre[] = invertir<HijoDePadre>([hijoDePadre,hijoDePadre2]);
+
+abstract class DAOGenerico <T> {
+    abstract add(objeto :T);
+    abstract del(objeto :T);
+    stringify(objeto :T){
+        return objeto+"";    
+    }
+}
+class ArrayGenericDAO <T>{
+    private almacen :T[] = [];
+    add(objeto: T){
+        this.almacen.push(objeto);
+    }
+    del(objeto: T){
+        // recorrer, buscar y eliminar! (Terminator)
+    }
+    list():T[]{
+        return this.almacen;
+    }
+}
+
+var dao: DAOGenerico<Persona> = null;
+dao.add(new Persona("","",""));
+
+// interfaz calculadora
+// control de la vista (ViewController)
+class Calculadora{
+    //atributos de instancia
+    private memoria: number = 0;
+    operar(numero: number,operacion: string):void{
+        this.memoria = this.memoria + numero;
+    }
+    dameLaMemoria():number{
+        return this.memoria;
+    }
+}
+// Simulo un clientes
+let calc1 = new Calculadora();// memoria = 0
+let calc2 = new Calculadora();// memoria = 0
+calc1.operar(7,"+"); // devuelve 7 - memoria 7
+class CalculadoraCientifica extends Calculadora{
+    operar(numero: number, operacion: string){
+        // en elcaso de suma, resta multi divi
+        if(operacion == "+" ){
+            return super.operar(numero,operacion);
+        }else{
+
+        }
+
+    }
 }
