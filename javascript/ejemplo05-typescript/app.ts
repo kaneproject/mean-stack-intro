@@ -264,7 +264,7 @@ dao.add(new Persona("","",""));
 class Calculadora{
     //atributos de instancia
     private memoria: number = 0;
-    operar(numero: number,operacion: string):void{
+    operar(numero: number,operacion: Operador):void{
         this.memoria = this.memoria + numero;
     }
     dameLaMemoria():number{
@@ -274,15 +274,37 @@ class Calculadora{
 // Simulo un clientes
 let calc1 = new Calculadora();// memoria = 0
 let calc2 = new Calculadora();// memoria = 0
-calc1.operar(7,"+"); // devuelve 7 - memoria 7
+calc1.operar(7,Operador.sumar); // devuelve 7 - memoria 7
 class CalculadoraCientifica extends Calculadora{
-    operar(numero: number, operacion: string){
+    operar(numero: number, operacion: Operador){
         // en elcaso de suma, resta multi divi
-        if(operacion == "+" ){
+        if(Operador.sumar == operacion ){
             return super.operar(numero,operacion);
         }else{
 
         }
 
     }
+    
+}
+enum Operador{
+    sumar,restar,multiplicar,dividir
+}
+
+class Utilidades {
+    
+    static localizarCadena(){
+
+    }
+}
+var util = new Utilidades();
+Utilidades.localizarCadena
+function localizarCadena(){
+
+}
+function localizarNumero(){
+
+}
+function resetearFormulario(){
+
 }
