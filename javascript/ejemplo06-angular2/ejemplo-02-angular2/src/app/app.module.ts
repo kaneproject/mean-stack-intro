@@ -5,11 +5,13 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { MiComponenteNuevoComponent } from './mi-componente-nuevo/mi-componente-nuevo.component';
+import { Ejemplo01NgforNgifComponent } from './ejemplo01-ngfor-ngif/ejemplo01-ngfor-ngif.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MiComponenteNuevoComponent
+    MiComponenteNuevoComponent,
+    Ejemplo01NgforNgifComponent
   ],
   imports: [
     BrowserModule,
@@ -17,6 +19,6 @@ import { MiComponenteNuevoComponent } from './mi-componente-nuevo/mi-componente-
     HttpModule
   ],
   providers: [],
-  bootstrap: [AppComponent,MiComponenteNuevoComponent]
+  bootstrap: [AppComponent,Ejemplo01NgforNgifComponent]
 })
 export class AppModule { }
