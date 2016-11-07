@@ -21,6 +21,6 @@ import { NumerosPrimosComponent } from './numeros-primos/numeros-primos.componen
     HttpModule
   ],
   providers: [],
-  bootstrap: [AppComponent,Ejemplo01NgforNgifComponent]
+  bootstrap: [AppComponent,NumerosPrimosComponent]
 })
 export class AppModule { }

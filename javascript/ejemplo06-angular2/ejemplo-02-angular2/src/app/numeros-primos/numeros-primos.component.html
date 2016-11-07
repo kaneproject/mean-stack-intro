@@ -1,0 +1,14 @@
+<h1>Identificador de numeros primos y divisibles por 3</h1>
+<ul>
+  <li *ngFor="let numero of listaDeNumeros">
+    <span [ngStyle]="{color: colorEnDistintosEstados(numero)}">
+      {{numero}}
+    </span>
+  </li>
+</ul>
+<button (click)="cambiarEstadoInformacion()">Mostrar u ocultar informacion</button>
+<ul *ngIf="mostrarInformacion">
+  <li>Numeros primos en <span style="color: red">ROJO</span></li>
+  <li>Numeros divisibles por 3 en <span style="color: orange">NARANJA</span></li>
+  <li>Resto de numeros en <span style="color: blue">AZUL</span></li>
+</ul>
