@@ -9,10 +9,10 @@ import { NumerosPrimosService } from '../numeros-primos.service';
 })
 export class NumerosPrimosConServicioComponent implements OnInit {
 
-
+  listaDeNumeros: number[];
   mostrarInformacion: boolean = false;
   constructor(private numerosPrimosService: NumerosPrimosService ) { 
-    
+    this.listaDeNumeros = this.numerosPrimosService.listaDeNumeros;
   }
 
 

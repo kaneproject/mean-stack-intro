@@ -23,6 +23,6 @@ import { NumerosPrimosConServicioComponent } from './numeros-primos-con-servicio
     HttpModule
   ],
   providers: [],
-  bootstrap: [AppComponent,NumerosPrimosComponent]
+  bootstrap: [AppComponent,NumerosPrimosConServicioComponent]
 })
 export class AppModule { }
