@@ -10,6 +10,7 @@ import { NumerosPrimosComponent } from './numeros-primos/numeros-primos.componen
 import { NumerosPrimosConServicioComponent } from './numeros-primos-con-servicio/numeros-primos-con-servicio.component';
 import { NumerosPrimosLeyendaComponent } from './numeros-primos-leyenda/numeros-primos-leyenda.component';
 import { NumerosPrimosFilaComponent } from './numeros-primos-fila/numeros-primos-fila.component';
+import { NumerosPrimosPanelComponent } from './numeros-primos-panel/numeros-primos-panel.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { NumerosPrimosFilaComponent } from './numeros-primos-fila/numeros-primos
     NumerosPrimosComponent,
     NumerosPrimosConServicioComponent,
     NumerosPrimosLeyendaComponent,
-    NumerosPrimosFilaComponent
+    NumerosPrimosFilaComponent,
+    NumerosPrimosPanelComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +29,6 @@ import { NumerosPrimosFilaComponent } from './numeros-primos-fila/numeros-primos
     HttpModule
   ],
   providers: [],
-  bootstrap: [AppComponent,NumerosPrimosLeyendaComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
