@@ -9,6 +9,7 @@ import { Ejemplo01NgforNgifComponent } from './ejemplo01-ngfor-ngif/ejemplo01-ng
 import { NumerosPrimosComponent } from './numeros-primos/numeros-primos.component';
 import { NumerosPrimosConServicioComponent } from './numeros-primos-con-servicio/numeros-primos-con-servicio.component';
 import { NumerosPrimosLeyendaComponent } from './numeros-primos-leyenda/numeros-primos-leyenda.component';
+import { NumerosPrimosFilaComponent } from './numeros-primos-fila/numeros-primos-fila.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NumerosPrimosLeyendaComponent } from './numeros-primos-leyenda/numeros-
     Ejemplo01NgforNgifComponent,
     NumerosPrimosComponent,
     NumerosPrimosConServicioComponent,
-    NumerosPrimosLeyendaComponent
+    NumerosPrimosLeyendaComponent,
+    NumerosPrimosFilaComponent
   ],
   imports: [
     BrowserModule,
@@ -25,6 +27,6 @@ import { NumerosPrimosLeyendaComponent } from './numeros-primos-leyenda/numeros-
     HttpModule
   ],
   providers: [],
-  bootstrap: [AppComponent,NumerosPrimosConServicioComponent]
+  bootstrap: [AppComponent,NumerosPrimosLeyendaComponent]
 })
 export class AppModule { }
