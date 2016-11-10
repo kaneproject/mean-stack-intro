@@ -9,22 +9,35 @@ import { NumerosPrimosService} from '../numeros-primos.service';
 })
 export class NumerosPrimosPanelComponent implements OnInit {
 
-  listaDeNumeros: number[];
+  private listaDeNumeros: number[];
+  private mostrarInformacion: boolean = false;
   constructor(private numerosPrimosService: NumerosPrimosService) { 
     this.listaDeNumeros = this.numerosPrimosService.listaDeNumeros;
 }
-
-
-  colorEnDistintosEstados(numero: number):string{
-      if(this.numerosPrimosService.esPrimo(numero)){
-        return "red";
-      } else if (this.numerosPrimosService.esMultiploDeTres(numero)){
-        return "orange";
-      } else{
-        return "blue"; 
-      }
+ngOnInit() {
   }
-  ngOnInit() {
+tipoDeNumero(numero: number){
+  if(this.numerosPrimosService.esPrimo(numero)){
+      return "Es un numero primo";
+    } else if (this.numerosPrimosService.esMultiploDeTres(numero)){
+      return "Es multiplo de tres";
+    } else{
+      return "No es nada de nada, pobrecillo ¡_¡"; 
+    }
+}
+colorEnDistintosEstados(numero: number):string{
+    if(this.numerosPrimosService.esPrimo(numero)){
+      return "red";
+    } else if (this.numerosPrimosService.esMultiploDeTres(numero)){
+      return "orange";
+    } else{
+      return "blue"; 
+    }
+}
+  eventoDeFilaRecibido(eventoRecibido:boolean):void{
+    console.log("Evento: " + eventoRecibido);
+    this.mostrarInformacion = eventoRecibido;
+    console.log("Evento recibido!");
   }
   
 

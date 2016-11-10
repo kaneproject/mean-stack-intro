@@ -2,7 +2,8 @@
 <ul>
   <li *ngFor="let numeroActual of listaDeNumeros">
     <span [ngStyle]="{color: colorEnDistintosEstados(numeroActual)}">
-        <app-numeros-primos-fila [numero]="numeroActual">Cargando fila</app-numeros-primos-fila>
+        <app-numeros-primos-fila [numero]="numeroActual" (eventoMostrar)="eventoDeFilaRecibido($event)">Cargando fila</app-numeros-primos-fila>
+        <span *ngIf="mostrarInformacion">{{tipoDeNumero(numeroActual)}}</span>
     </span>
   </li>
 </ul>

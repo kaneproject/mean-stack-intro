@@ -1,0 +1,20 @@
+<form #form="ngForm" (ngSubmit)="enviarFormulario(form.value)" >
+  <label>Tipo text: Titulo</label>
+  <input type="text" #titulo="ngModel" name="titulo" [(ngModel)]="libro.titulo" required/>
+  <br/>
+  <div [hidden]="titulo.valid || titulo.pristine">Titulo requerido</div>
+  <br/>
+  <label>Tipo Radio: Autor</label>
+  <label>
+    <input type="radio" name="autor" value="JRRTolkien" [(ngModel)]="libro.autor"/> J.R.R.Tolkien
+  </label>
+  <label>
+    <input type="radio" name="autor" value="Michael Ende" [(ngModel)]="libro.autor"/> Michael Ende
+  </label>
+  <br/>
+  <label>
+    <input type="checkbox" name="sinopsis" [(ngModel)]="libro.sinopsis"> Si tiene sinopsis
+  </label>
+  <br/>
+  <button type="submit" [disabled]="form.invalid">Enviar</button>
+</form>
