@@ -29,6 +29,15 @@
             "args": [
                 "ejemplo-01-nodejs-base.js_falso"
             ]
+        },{
+            "type": "node",
+            "request": "launch",
+            "name": "ejemplo-04-listar-ficheros.js",
+            "program": "${workspaceRoot}/ejemplo-04-listar-ficheros.js",
+            "cwd": "${workspaceRoot}",
+            "args": [
+                ".",".js"
+            ]
         }
         
     ]
