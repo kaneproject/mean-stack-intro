@@ -1,0 +1,44 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Ejemplo 01 - entrada",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/ejemplo-01-nodejs-base.js",
+            "stopOnEntry": false,
+            "args": [],
+            "cwd": "${workspaceRoot}",
+            "preLaunchTask": null,
+            "runtimeExecutable": null,
+            "runtimeArgs": [
+                "--nolazy"
+            ],
+            "env": {
+                "NODE_ENV": "development"
+            },
+            "console": "internalConsole",
+            "sourceMaps": false,
+            "outFiles": []
+        },{
+            "name": "Ejemplo 02 - fileSystem sincrono",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/ejemplo-02-require.js",
+            "stopOnEntry": false,
+            "args": ["ejemplo-02-require.js"],
+            "cwd": "${workspaceRoot}",
+            "preLaunchTask": null,
+            "runtimeExecutable": null,
+            "runtimeArgs": [
+                "--nolazy"
+            ],
+            "env": {
+                "NODE_ENV": "development"
+            },
+            "console": "internalConsole",
+            "sourceMaps": false,
+            "outFiles": []
+        }
+    ]
+}
