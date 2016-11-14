@@ -1,0 +1,15 @@
+{
+  "name": "ejemplos_nodejs",
+  "version": "0.0.1",
+  "description": "Bateria de ejemplos de codigo nodejs",
+  "main": "ejemplo-01-nodejs-base.js",
+  "dependencies": {
+    "bl": "^1.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "rgomez@pronoide.es",
+  "license": "ISC"
+}

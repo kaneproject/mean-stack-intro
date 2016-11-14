@@ -10,7 +10,7 @@ module.exports = function (directorio,extension,callback){
             //console.log("Expresiones Lambda");
             // filtro el contenido de ficheros
             ficheros = ficheros.filter((fichero)=>{
-                return path.extname(fichero) === "." + extension;
+                return path.extname(fichero) === extension;
             });
             callback(null,ficheros);
         }
