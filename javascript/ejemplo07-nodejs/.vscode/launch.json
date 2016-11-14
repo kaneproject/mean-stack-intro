@@ -50,6 +50,18 @@
             "name": "ejemplo-08-http-async.js",
             "program": "${workspaceRoot}/ejemplo-08-http-async.js",
             "cwd": "${workspaceRoot}"
+        },{
+            "type": "node",
+            "request": "launch",
+            "name": "ejemplo-09-server.js",
+            "program": "${workspaceRoot}/ejemplo-09-server.js",
+            "cwd": "${workspaceRoot}"
+        },{
+            "type": "node",
+            "request": "launch",
+            "name": "ejemplo-10-file-server.js",
+            "program": "${workspaceRoot}/ejemplo-10-file-server.js",
+            "cwd": "${workspaceRoot}"
         }
     ]
 }
