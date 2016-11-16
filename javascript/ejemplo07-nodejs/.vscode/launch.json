@@ -62,6 +62,12 @@
             "name": "ejemplo-10-file-server.js",
             "program": "${workspaceRoot}/ejemplo-10-file-server.js",
             "cwd": "${workspaceRoot}"
+        },{
+            "type": "node",
+            "request": "launch",
+            "name": "ejemplo-11-http-UpperCasePost.js",
+            "program": "${workspaceRoot}/ejemplo-11-http-UpperCasePost.js",
+            "cwd": "${workspaceRoot}"
         }
     ]
 }

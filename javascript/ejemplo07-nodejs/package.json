@@ -4,7 +4,8 @@
   "description": "Bateria de ejemplos de codigo nodejs",
   "main": "ejemplo-01-nodejs-base.js",
   "dependencies": {
-    "bl": "^1.1.2"
+    "bl": "^1.1.2",
+    "through2-map": "^3.0.0"
   },
   "devDependencies": {},
   "scripts": {
