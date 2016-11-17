@@ -29,6 +29,12 @@ app.get("/save/:fichero.:extension",(request,response)=>{
 });
 function funcionIntermedia(request,response,next){
     console.log("Ejecutado a las: "  + new Date());
+   /* db.analytics.update(
+        {url:request.originalUrl},
+        {$set:{hits:{$inc:1}}},
+        true);
+    {"url":"/","hits":2318}
+    {"url":"/clientes",hits:52323}*/
     next();
 }
 function funcionIntermediaFin(request,response,next){
@@ -39,14 +45,24 @@ function funcionIntermediaFin(request,response,next){
     //    next()
     //}
 }
-app.get("/concatenado",
+app.get("/concatenado",[
     funcionIntermedia,
     funcionIntermediaFin,
     funcionIntermedia,
     (request,response)=>{
         response.send("Enviado");
-    });
+    }]);
 
+app.route("/rutaconjunta")
+    .get(evaluaElVerboHttp)
+    .post(evaluaElVerboHttp)
+    .put(evaluaElVerboHttp)
+    .delete(evaluaElVerboHttp);
+var  router = express.Router();
+router.use(funcionIntermedia);
+router.get("/conrouter",evaluaElVerboHttp)
+router.post("/conrouterpost",evaluaElVerboHttp)
+app.use("/cosacuca",router);
 app.listen(8080);
 console.log("Servidor iniciado");
 
