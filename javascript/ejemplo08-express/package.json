@@ -1,0 +1,17 @@
+{
+  "name": "ejemplo08-express",
+  "version": "1.0.0",
+  "description": "Ejemplos de uso de express.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express"
+  ],
+  "author": "Ruben",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
