@@ -41,6 +41,7 @@ function funcionIntermediaFin(request,response,next){
     console.log("Ejecutado a las: "  + new Date());
     //if(noAutenticado){
         response.send("fin");
+        
     //}else{
     //    next()
     //}
@@ -63,9 +64,41 @@ router.use(funcionIntermedia);
 router.get("/conrouter",evaluaElVerboHttp)
 router.post("/conrouterpost",evaluaElVerboHttp)
 app.use("/cosacuca",router);
+
+var routerRest = express.Router();
+routerRest.route("/coches")
+    .get((request,response)=>{
+        response.json([{_id:1,marca:"opel",modelo:"corsa"},
+                    {_id:2,marca:"audi",modelo:"a4"}]);
+    })
+    .post((request,response)=>{
+        // Recoger la informacion del body para crear un 
+        // nuevo coche
+        /*request.body.marca
+        request.body.modelo*/
+        response.json({message:"insertado"})
+    });
+    // localhost:8080/concesionario/coches/idCoche
+routerRest.route("/coches/:alias")
+    .get((request,response)=>{
+        // TODO: obtener el coche a partir de su idCoche
+        response.json({_id:1,marca:"opel",modelo:"corsa"})
+    })
+    .delete((request,response)=>{
+        response.json({message:"borrado"});
+    })
+    .put((request,response)=>{
+        //TODO: Obtener el id y del body obtener marca y modelo
+        response.json({message:"actualizado"});
+    });
+app.use("/",routerRest);
 app.listen(8080);
 console.log("Servidor iniciado");
-
+/* 
+    Response permite:
+     download() end() json() jsonp() redirect() render() 
+     send() sendFile() sendStatus()
+*/
 
 
 
