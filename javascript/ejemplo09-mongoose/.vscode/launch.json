@@ -10,6 +10,12 @@
             "name": "ejemplo01base",
             "program": "${workspaceRoot}\\ejemplo01base.js",
             "cwd": "${workspaceRoot}"
+        },{
+            "type": "node",
+            "request": "launch",
+            "name": "ejemplo02schema",
+            "program": "${workspaceRoot}\\ejemplo02schema.js",
+            "cwd": "${workspaceRoot}"
         }
     ]
 }
