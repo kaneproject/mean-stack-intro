@@ -16,6 +16,12 @@
             "name": "ejemplo02schema",
             "program": "${workspaceRoot}\\ejemplo02schema.js",
             "cwd": "${workspaceRoot}"
+        },{
+            "type": "node",
+            "request": "launch",
+            "name": "ejemplo03statics",
+            "program": "${workspaceRoot}\\ejemplo03statics.js",
+            "cwd": "${workspaceRoot}"
         }
     ]
 }
