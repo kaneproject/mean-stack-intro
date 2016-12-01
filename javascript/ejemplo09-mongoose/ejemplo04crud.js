@@ -26,3 +26,5 @@ function deleteLibro(_id){
 
     })
 }
+
+deleteLibro("1")
