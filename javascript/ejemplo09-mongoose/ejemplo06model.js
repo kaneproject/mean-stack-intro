@@ -34,4 +34,5 @@ var LibroSchema = new Schema({
         ultima_reserva: Date
     }
 })
+LibroSchema.index({fecha:1,"campos_biblioteca.reservas":-1});
 module.exports = mongoose.model("Libro",LibroSchema);
