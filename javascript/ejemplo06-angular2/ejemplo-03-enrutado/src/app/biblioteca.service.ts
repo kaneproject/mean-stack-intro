@@ -20,5 +20,23 @@ export class BibliotecaService {
           return Observable
           .throw(error.json().error || "Error de servidor");
         })
-  }
+}
+  	addLibro(body: Object): Observable<Libro>{
+      let miLibroEnString = JSON.stringify(body);
+      //"{id:null,titulo:'Lo que sea'}"
+      let miCabecera = new Headers(
+        {'Content-type':'application/json'});
+
+      let options = new RequestOptions({headers:miCabecera})
+      return this.http.post(this.url,miLibroEnString,options)
+          .map((response:Response)=>{
+            console.log("LLego la respuesta!");
+            return response.json();
+          })
+          .catch((error:any)=>{
+                console.log("Error al procesar la peticion");
+                return Observable
+                .throw(error.json().error || "Error de servidor");
+          })
+    }
 }
