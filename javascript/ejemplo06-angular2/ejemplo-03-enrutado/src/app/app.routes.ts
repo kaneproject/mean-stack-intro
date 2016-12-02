@@ -7,5 +7,5 @@ export const AppRoutes: Routes = [
     { path: '', redirectTo: 'listar', pathMatch:"full"},
     { path: 'listar', component: ListaLibrosComponent},
     { path: 'consultar/:id', component: ConsultaLibroComponent},
-    { path: 'formulario', component: FormularioLibroComponent}
+    { path: 'formulario/:id', component: FormularioLibroComponent}
 ]
