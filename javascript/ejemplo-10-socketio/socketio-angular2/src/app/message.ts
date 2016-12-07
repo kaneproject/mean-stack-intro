@@ -3,4 +3,7 @@ export class Message {
         private user: string,
         private content: string
     ){}
+    toString(){
+        return this.user + " " + this.content;
+    }
 }

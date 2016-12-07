@@ -10,6 +10,7 @@ export class ChatService {
   private socket;
   constructor() { }
   sendMessage(message: Message):void{
+    console.log("Enviando mensaje " + message);
     this.socket.emit('mando-un-mensaje',message);
   }
   getMessages(){

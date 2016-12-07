@@ -15,6 +15,7 @@ export class ChatComponent implements OnInit,OnDestroy {
   constructor(private service: ChatService) { }
 
   sendMessage(){
+    console.log("Mensaje a enviar por component: " + this.message)
     this.service.sendMessage(this.message);
   }
   ngOnInit() {
