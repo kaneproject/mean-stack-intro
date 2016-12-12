@@ -1,0 +1,19 @@
+{
+  "name": "ejemplo01-express-basic",
+  "version": "1.0.0",
+  "description": "Ejemplo autenticacion basic con passport",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "passport"
+  ],
+  "author": "rubengomez78@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "passport": "^0.3.2",
+    "passport-http": "^0.3.0"
+  }
+}

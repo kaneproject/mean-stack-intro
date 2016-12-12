@@ -6,7 +6,7 @@ import { Message } from './message'
 
 @Injectable()
 export class ChatService {
-  private url: string = 'http://localhost:3000';
+  private url: string = 'http://localhost:3000/chat';
   private socket;
   constructor() { }
   sendMessage(message: Message):void{
@@ -34,3 +34,4 @@ export class ChatService {
     );
   }
 }
+
