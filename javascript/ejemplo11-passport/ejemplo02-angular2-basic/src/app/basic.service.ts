@@ -10,14 +10,14 @@ export class BasicService {
 
   constructor(private http: Http) { }
 
-  getResultado(): Observable<string>{
+  getResultado(): Observable<Response>{
     let cabeceraDeSeguridad = new Headers();
     
     let username = "luis";
     let password = "luis";
     cabeceraDeSeguridad
       .append('Authorization',
-            "Basic " + username + ":" +password);
+            "Basic " + btoa(username + ":" +password) );
     let opcionesDeRequest = 
       new RequestOptions({headers:cabeceraDeSeguridad});
     return this.http.get("http://127.0.0.1:8080/home"
