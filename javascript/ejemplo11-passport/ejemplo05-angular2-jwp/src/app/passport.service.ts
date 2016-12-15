@@ -19,7 +19,7 @@ public token: string;
   login(username: string,password: string): Observable<boolean>{
     // Defino el contenido del mensaje en las cabeceras
     let cabeceras = new Headers({'Content-Type':'application/json'});
-    return this.http.post('http://localhost:8080/authenticate',{
+    return this.http.post('http://localhost:8080/api/authenticate',{
       name:username,
       password:password
     },new RequestOptions({headers:cabeceras}))
@@ -34,7 +34,7 @@ public token: string;
   }
   getMemberInfo(): Observable<any>{
     let cabeceras = new Headers({'Authorization':this.token });
-    return this.http.get('http://localhost:8080/memberinfo',
+    return this.http.get('http://localhost:8080/api/memberinfo',
     new RequestOptions({headers:cabeceras}))
     .map((response: Response)=>{
       return response.json();

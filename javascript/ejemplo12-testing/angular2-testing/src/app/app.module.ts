@@ -4,24 +4,23 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component';
-import { routing } from './app.routing';
-import { PermisoAccesoService } from './permiso-acceso.service';
+import { Ejemplo01baseComponent } from './ejemplo01base/ejemplo01base.component';
+import { Ejemplo02InputComponent } from './ejemplo02-input/ejemplo02-input.component';
+import { Ejemplo03ProviderComponent } from './ejemplo03-provider/ejemplo03-provider.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    LoginComponent
+    Ejemplo01baseComponent,
+    Ejemplo02InputComponent,
+    Ejemplo03ProviderComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
-    routing
+    HttpModule
   ],
-  providers: [PermisoAccesoService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
