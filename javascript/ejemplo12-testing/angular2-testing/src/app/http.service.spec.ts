@@ -26,7 +26,23 @@ describe('Service: Http', () => {
     });
   });
 
+  beforeEach(inject([MockBackend],(backend: MockBackend)=>{
+    const miResponse = new Response(
+      new ResponseOptions({body:"toma billetes!!"})
+      );
+      backend
+      .connections
+      .subscribe((conn)=>{conn.mockRespond(miResponse)});
+  }));
+
   it('should ...', inject([HttpService], (service: HttpService) => {
     expect(service).toBeTruthy();
   }));
+
+  it('A ver si el servicio me devuelve billetes',inject([HttpService],(service: HttpService)=>{
+      service.gimmeTheMoney().subscribe((response: Response)=>{
+        expect(response.text()).toBe("toma billetes!!");
+      })
+  }));
+
 });

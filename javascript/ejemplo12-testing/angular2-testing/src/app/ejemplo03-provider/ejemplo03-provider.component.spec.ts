@@ -12,11 +12,13 @@ describe('Ejemplo03ProviderComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ Ejemplo03ProviderComponent ],
-      providers:[
-        {provide: UsersService,useClass: MockusersService}
-        ]
-    })
+      declarations: [ Ejemplo03ProviderComponent ]
+    }
+      ).overrideComponent(Ejemplo03ProviderComponent,{
+        set:{
+          providers:[{ provide: UsersService, useClass: MockusersService}]
+        }
+      })
     .compileComponents();
   }));
 
